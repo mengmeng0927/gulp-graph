@@ -1,4 +1,4 @@
-var fs = require('fs');
+var mkdirp = require('mkdirp');
 var shell = require('gulp-shell');
 
 
@@ -24,7 +24,7 @@ module.exports = function(gulp) {
 
         dot += '}\n';
 
-        fs.mkdir('target')
+        mkdirp('target')
         fs.writeFileSync('target/gulp.dot', dot);
     });
 
