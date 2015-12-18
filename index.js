@@ -1,5 +1,6 @@
 var mkdirp = require('mkdirp');
 var shell = require('gulp-shell');
+var fs = require('fs')
 
 
 module.exports = function(gulp) {
