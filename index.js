@@ -26,11 +26,11 @@ module.exports = function(gulp) {
         dot += '}\n';
 
         mkdirp('target')
-        fs.writeFileSync('target/gulp.dot', dot);
+        fs.writeFileSync('target/gulp-graph/gulp.dot', dot);
     });
 
     gulp.task('graph', ['graphGenerate'], shell.task([
-        'dot -Tsvg -O target/gulp.dot'
+        'dot -Tsvg -O target/gulp-graph/gulp.dot'
     ]));
 
 };
